@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    
+    <style type="text/css">
+		
+		.list{
+			border-radius: 30px;
+			margin-right:350px;
+		}
+		.div1{
+			height:50px;
+			width:100%;
+			background-color: black;
+			
+		}
+		.div1 ul li{
+			display: inline-block;
+			list-style-type: none;
+			color:white;
+			margin-left: 50px;
+			margin-top: 10px;
+		}
+		.image{
+			height:400px;
+		}
+		.div2{
+			height:200px;
+			width:100%;
+			background-color: black;
+		}
+		.div2 h1{
+			color:white;
+	
+		}
+		.div2 h2{
+			color:white;
+			font-weight:lighter;
+			font-size: 20pt;
+		}
+		.div2 p{
+			color:white;
+	
+		}
+		.div2 button:hover{
+             border: 2px solid blue;
+		}
+		.div3{
+			height:100px;
+			width:100%;
+			text-align: center;
+			margin-top: 30px;
+		}
+		.cd{
+			width:32%;
+			margin-left:10px ;
+		}
+		.cd img{
+			height:180px;
+			width:100%;
+		}
+		.div4 {
+			height:350px;
+			width:100%;
+			margin-top: 30px;
+		}
+		.div5 {
+			height:100px;
+			width:100%;
+	
+		}
+		.div5 h1{
+			text-align: center;
+			margin-top: 30px;
+			
+		}
+		.div5 p{
+			text-align: center;
+		}
+		.cd1{
+			width:25%;
+		}
+		.cd1 img{
+			height:200px;
+		}
+		.div6 #one{
+			height:300px;
+			width:30%;
+			float: left;
+			margin-bottom: 50px;
+			margin-top: 30px;
+			/*background-color: blue;*/
+		}
+		.div6 #one img {
+			width:100%;
+			height:100%;
+			border-radius: 50%;
+		}
+		.div6 #two{
+			height:300px;
+			width:60%;
+			float: left;
+			margin-top: 30px;
+			margin-bottom: 50px;;
+			margin-left: 100px;
+			/*background-color: aquamarine;*/	
+		} 
+		.div7{
+			height:180px;
+			width:100%;
+			margin-top: 50px;
+			padding:30px;
+			background-color: black;
+		}
+
+	.div7 #one{
+			width:25%;
+			height:210px;
+			float: left;
+			padding: 20px;
+			background-color: black;
+		}
+		.div7 #two{
+			width:25%;
+			height:210px;
+			float: left;
+			padding:20px;
+			background-color:black;
+		}
+		.div7 #three{
+			width:25%;
+			height:210px;
+			float: left;
+			padding:20px;
+			background-color:black;
+		}
+		.div7 #four{
+			width:25%;
+			height:210px;
+			float: left;
+			padding:20px;
+			background-color:black;
+		}
+      .div7 p {
+		color:white;
+	  }
+	  .div7 h1{
+		color:white;
+	  }
+	  .div8{
+		color:white;
+	  }
+        
+		</style>
+</head>
+<body>
+<div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark ">
+		<img src="TCS_iON-logo.png">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		  <button class="btn btn-dark  ml-5"style="border: 2px solid white;">Explore </button>
+		</button>
+
+		<input class="form-control mr-sm-2  ml-5   w-25 list" type="search" placeholder="Search" aria-label="Search">
+	  
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		  <ul class="navbar-nav mr-auto">
+			<li class="nav-item active">
+			  <a class="nav-link" href="#" style="margin-left:200px;color:white;font-weight: bold;">Activate Code <span class="sr-only">(current)</span></a>
+			</li>
+			 
+		 	<button class="btn btn-dark my-2 my-sm-0 ml-2" type="submit" style="border: 2px solid white;">Login/Register</button>
+			 <ion-icon name="cart-outline bg-white"></ion-icon>
+			 <img src="tata-logo.png" style="margin-left: 30px;">
+		</ul>
+		</div>
+	  </nav>
+
+	 <div class="div1">
+		<ul>
+			<li>Leaners</li>
+			<li>Institutions</li>
+			<li>Resources</li>
+			<li>Jobs</li>
+			<li>About Us</li>
+			<li>Contact Us</li>
+		</ul>
+	</div>
+
+
+		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+			  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+			  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+			  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+			</ol>
+			<div class="carousel-inner">
+			  <div class="carousel-item active">
+				<img src="t4.jfif" class="d-block w-100 image" alt="...">
+			  </div>
+			  <div class="carousel-item">
+				<img src="t4.avif" class="d-block w-100 image" alt="...">
+			  </div>
+			  <div class="carousel-item">
+				<img src="t5.jfif" class="d-block w-100 image"alt="...">
+			  </div>
+			</div>
+			<button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
+			  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			  <span class="sr-only">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
+			  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+			  <span class="sr-only">Next</span>
+			</button>
+		  </div>
+
+		<div class="row mt-5">
+			<div class="col-4 p-3 text-center div2">
+				<h1>We would like to <br>know you better </h1>
+				<p>We will personalized<br>recommendation here</p>
+			</div>
+			<div class="col-2  p-3 div2">
+				<h2>Lerners</h2>
+				<button>Youth</button>
+			</div>
+			<div class="col-6   p-3 div2">
+				<h2>Institutions</h2>
+				<br>
+				<button>Governmant</button>
+				<button>School Education</button>
+				<br>
+				<br>
+				<button>Vocational Education</button>
+				<button>Higher Education</button>
+			</div>
+			</div></div>
+		
+
+<div class="container">			
+	  <div class="div3 ">
+		<h1>Courses for Learners</h1>
+		<p>Explore corces that are in demand</p>
+		<br>
+	  </div>
+		<br>
+		<div  class="div4">
+		<div class="card float-left cd">
+			<div class="card-header bg-primary p-0 ">
+				<img src="c1.jfif">
+			</div>
+			<div class="card-body">
+				<p>Cambrigde Profesional
+				<br>Development programm</p>
+			</div>
+			<div class="card-footer">
+				<button class="btn btn-dark btn-block">Cart</button>
+			</div>
+		</div>
+		<div class="card float-left cd">
+			<div class="card-header bg-primary p-0">
+				<img src="c2.jfif">
+			</div>
+			<div class="card-body">
+				<p>Build a Fruit slice Game <br>(HTML, CSS and jquery)</p>
+			</div>
+			<div class="card-footer">
+				<button class="btn btn-dark btn-block">Cart</button>
+			</div>
+		</div>
+		<div class="card float-left cd">
+			<div class="card-header bg-primary p-0">
+				<img src="c3.jfif">
+			</div>
+			<div class="card-body">
+				<p>Build an Online Notes App<br>(HTML,CSS,BOOSTRAP,PHP,MySQL,AJAX)</p>
+			</div>
+			<div class="card-footer">
+				<button class="btn btn-dark btn-block">Cart</button>
+			</div>
+		</div>
+		</div>
+		<div class="div5">
+			<h1>Offering for Institutions</h1>
+			<p>Get access in best-in class,Secured and Seamless cloud based solution</p>
+		</div>
+
+			<div class="card float-left  cd1">
+				<div class="card-header p-0">
+					<img src="d1.jfif">
+				</div>
+			    <div class="card-body">
+					<h5>TCSiON<br>Digital Learning</h5>
+					<p>Discover and <br>collaborative</p>
+				</div>
+				<div class="card-footer">
+					<button class="btn btn-block btn-primary">Learn More</button>
+				</div>
+			</div>
+			<div class="card float-left    cd1 ">
+				<div class="card-header p-0 ">
+					<img src="d2.jfif">
+				</div>
+			    <div class="card-body">
+					<h5>TCSiON<br>Digital Assessment</h5>
+					<p>Conduct fun and<br>Assessment</p>
+				</div>
+				<div class="card-footer">
+					<button class="btn btn-block btn-primary">Learn More</button>
+				</div>
+			</div>
+            <div class="card float-left  cd1">
+				<div class="card-header p-0 ">
+					<img src="d3.jfif">
+				</div>
+			    <div class="card-body">
+					<h5>TSCiON<br>Digital Marking</h5>
+					<p>Access anywhere and<br> to improve efficiency</p>
+				</div>
+				<div class="card-footer">
+					<button class="btn btn-block btn-primary">Learn More</button>
+				</div>
+			</div>
+            <div class="card float-left   cd1">
+				<div class="card-header p-0 ">
+					<img src="d4.webp">
+				</div>
+			    <div class="card-body">
+					<h5>TCSiON<br>Digital Campus</h5>
+					<p>Manage traditional and<br>Un-traditional acdemic.</p>
+				</div>
+				<div class="card-footer">
+					<button class="btn btn-block btn-primary">Learn More</button>
+				</div>
+			</div>
+			<br><br>
+		<div class="div6">
+			
+        <div id="one" >
+			<img src="c4.jfif">
+		</div>
+		<div id="two" >
+			<br><br>
+			<h3>Learning made easier,<br>dreams turn into<br>reality!!</h3>
+			<button class="btn btn-secondary">Join for free</button>
+		</div>
+		</div>
+		
+	
+		<br><br><br>
+		<div class="div7">
+		
+			<div id="one" >
+				<h1>What is HTML.<br>CSS and<br>Bootstrap?</h1></div>
+			
+				<div id="two" >
+				<p>Hypertext Markup Language<br>(HTML)is a framework for<br>
+			labelling text records to define<br>textual style,colour and<br>
+		hyperlink on web pages</p>
+	</div>
+			<div id="three">
+				<p>Cascading Style Sheet(CSS)<br>is utillised with HTML to changr<br>
+			the style webpage and<br>depicts how HTML components<br>are to br shown on screen<br>
+		paper or in different media </p>
+			</div>
+			<div id="four">
+				<p>Bootstrap is a free and open-<br>source CSS framework directed<br>
+			at respective,mobile-first front-<br>and we Development</p>
+		</div>
+		</div>
+	
+		
+		<hr>
+		<br>
+		<div class="container-fluid">
+			<div class="row">
+			<div class="col-8 mt-5">
+				<img src="c5.webp">
+				</div>
+				<div class="col-4 mt-5">
+				<h3>Why TSCiON?</h3>
+					<p> empower people and organisations with tech-led education that helps them transform and makes them future-ready. We have designed a phygital platform that layers digital technology over physical assets. Our variety of solutions reimagines and transforms all key processes.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="container mt-5 ">
+			<div class="row">
+				<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 bg-dark  p-3 div8">
+					<h5>Services</h5>
+					<p>Government<br>School Education<br>Higher Education<br>Vocational Education</p>
+				</div>
+				<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 bg-dark p-3 div8">
+					<h5>Quick Links</h5>
+					<p>Testimonials<br>Blogs</p>
+				</div>
+				<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 bg-dark p-3 div8">
+					<h5>Company</h5>
+					<p>Contact Us<br>About Us<br>Jobs<br>Partner with Us</p>
+				</div>
+				<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 bg-dark p-3 div8">
+					<h5>Policies</h5>
+					<p>Terms of Use<br>Privacy Notice<br>Cookie Policy<br>Usage policy<br>California notice at collection</p>
+				</div>
+
+		</div>
+</body>
+</html>
