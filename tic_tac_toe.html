@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tic Tac Toe</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(141, 174, 207);
+
+    }
+
+    .game-container {
+      text-align: center;
+      background: #2d3436;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+      color: white;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .board {
+      display: grid;
+      grid-template-columns: repeat(3, 100px);
+      gap: 10px;
+      margin-bottom: 20px;
+      justify-content: center;
+    }
+
+    .cell {
+      width: 100px;
+      height: 100px;
+      background: #636e72;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2.5em;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .cell:hover {
+      background: pink;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1em;
+      border: none;
+      border-radius: 8px;
+      background: #0984e3;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #74b9ff;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="game-container">
+    <h1>Tic Tac Toe</h1>
+    <div id="board" class="board">
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+    </div>
+    <h2 id="statusText">Player X's Turn</h2>
+    <button id="restartBtn">Restart Game</button>
+  </div>
+
+  <script>
+    const cells = document.querySelectorAll("[data-cell]");
+    const statusText = document.getElementById("statusText");
+    const restartBtn = document.getElementById("restartBtn");
+
+    let currentPlayer = "X";
+    let board = ["", "", "", "", "", "", "", "", ""];
+    let running = true;
+
+    const winningCombos = [
+      [0, 1, 2],
+      [3, 4, 5],
+      [6, 7, 8],
+      [0, 3, 6],
+      [1, 4, 7],
+      [2, 5, 8],
+      [0, 4, 8],
+      [2, 4, 6]
+    ];
+
+    cells.forEach((cell, index) => {
+      cell.addEventListener("click", () => cellClicked(index));
+    });
+
+    restartBtn.addEventListener("click", restartGame);
+
+    function cellClicked(index) {
+      if (!running || board[index] !== "") return;
+
+      board[index] = currentPlayer;
+      cells[index].textContent = currentPlayer;
+
+      if (checkWinner()) {
+        statusText.textContent = `Player ${currentPlayer} Wins! 🎉`;
+        running = false;
+      } else if (board.every(cell => cell !== "")) {
+        statusText.textContent = "It's a Draw! 🤝";
+        running = false;
+      } else {
+        currentPlayer = currentPlayer === "X" ? "O" : "X";
+        statusText.textContent = `Player ${currentPlayer}'s Turn`;
+      }
+    }
+
+    function checkWinner() {
+      return winningCombos.some(combo => {
+        const [a, b, c] = combo;
+        return board[a] && board[a] === board[b] && board[a] === board[c];
+      });
+    }
+
+    function restartGame() {
+      currentPlayer = "X";
+      board = ["", "", "", "", "", "", "", "", ""];
+      running = true;
+      statusText.textContent = "Player X's Turn";
+      cells.forEach(cell => (cell.textContent = ""));
+    }
+
+  </script>
+</body>
+
+</html>
